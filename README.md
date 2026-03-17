@@ -123,6 +123,75 @@ I constrained the model to return **only valid JSON** with a fixed schema and a 
 
 Most helpful prompt: "**Create Express.js routes in TypeScript for an expense tracker API (POST/GET/DELETE) using existing parseExpense + SQLite CRUD, with validation and consistent responses**"
 
+
+## Test Cases
+
+### 1. "spent 500 on coffee"
+
+* Expense added, shows in list
+ <img width="1206" height="2622" alt="simulator_screenshot_8EE092BB-4855-4004-88E7-88FD54E05863" src="https://github.com/user-attachments/assets/2042e1fd-5cb1-4e74-ac22-adcba667aedf" />
+
+
+
+### 2. "uber 350"
+
+* Categorized as Transport
+* Expense added, shows in list
+<img width="1206" height="2622" alt="simulator_screenshot_454DC584-F84E-4DA8-B0D9-736CA52AF446" src="https://github.com/user-attachments/assets/f026193c-9c34-4db1-be24-68c0b8e99548" />
+
+### 3. "netflix subscription 649"
+
+* Categorized as Entertainment
+* Merchant shown as Netflix
+* Expense added, shows in list
+<img width="1206" height="2622" alt="simulator_screenshot_1DA95849-8DCF-41C5-9069-B68C2EBE018D" src="https://github.com/user-attachments/assets/d5c63ce0-dc4a-44c9-bedd-e950c4824385" />
+
+
+### 4. "coffee" (no amount)
+
+* Shows error message
+* Expense NOT added
+<img width="1206" height="2622" alt="simulator_screenshot_CF19AE4E-398C-4586-8446-5EC11205CA4B" src="https://github.com/user-attachments/assets/4477aca8-c861-4a52-b193-1451911521d2" />
+
+### 5. Random text "asdfgh"
+
+* Shows error message
+* Expense NOT added
+<img width="1206" height="2622" alt="simulator_screenshot_198EA78B-3858-4E9F-B17A-3AD56ED687B3" src="https://github.com/user-attachments/assets/8940cab7-f329-4e40-bd98-cd8a3e08a871" />
+
+### 6. Pull down on list
+
+* List refreshes
+* Latest expenses fetched and shown
+  Simulator Screen Recording - iPhone 17 Pro - 2026-03-18 at 00.24.50
+
+### 7. Tap delete on expense
+
+* Confirmation dialog shown ("Delete this expense?")
+<img width="1206" height="2622" alt="simulator_screenshot_6F45D4CE-2FA7-429C-9075-1067FDBFAA98" src="https://github.com/user-attachments/assets/d98deebd-600a-4e3d-8c23-1dc15a29a298" />
+
+### 8. Confirm delete
+
+* Expense removed from list
+* Delete request sent successfully
+<img width="1206" height="2622" alt="simulator_screenshot_48B6BD1A-39D1-4519-BC74-496A01191B12" src="https://github.com/user-attachments/assets/183382d1-752a-4c2c-9698-3e830451bf63" />
+
+### 9. Cancel delete
+
+* Expense stays in list
+* No delete request sent
+<img width="1206" height="2622" alt="simulator_screenshot_FF067B1E-B0A4-4F97-9F7A-1CF483F06EB2" src="https://github.com/user-attachments/assets/f979fd87-2d29-4a5c-832e-44ddb063a1e8" />
+
+### 10. Kill app, reopen
+
+
+* Previously added expenses still shown in list
+* Data persisted across app restarts
+
+ 
+https://github.com/user-attachments/assets/85e8f870-c1f0-4c72-abe3-c968e19e425b
+
+
 ## 📜 License
 
 MIT - Feel free to use this for your own projects!
