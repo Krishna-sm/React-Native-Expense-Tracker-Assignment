@@ -26,7 +26,7 @@ https://github.com/user-attachments/assets/85e8f870-c1f0-4c72-abe3-c968e19e425b
 ### Prerequisites
 - Node.js 20+
 - npm or yarn
-- Expo CLI
+- React Native Cli
 - Groq API key
 
 ### Backend
